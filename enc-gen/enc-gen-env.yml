@@ -1,0 +1,20 @@
+#Review
+
+name: enc-gen-env
+channels:
+  - intel
+  - defaults
+dependencies:
+  - daal4py=2021.6.0
+  - intelpython=2022.2.0
+  - numpy=1.21.4
+  - pip=21.2.4
+  - python=3.9.7
+  - scikit-learn-intelex=2021.6.0
+  - scipy=1.7.1
+  - streamlit
+  - pip:
+    - ipython==8.5.0
+    - pandas==1.4.2
+    - scikit-learn==1.3.0
+    - git+https://github.com/modAL-python/modAL.git
