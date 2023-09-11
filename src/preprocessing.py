@@ -33,18 +33,12 @@ def augment(df_path:None,samples_to_generate):
             generated_values.append(generated)
 
         if types=='uniform':
-            import random
-            choice=random.choice(['normal','uniform'])
-            generated=generator.add_numeric_column_modified(curr,samples_to_generate,label="abc",dist=choice,vals=[int(curr.iloc[0]),int(curr.iloc[1])])
+            generated=generator.add_numeric_column_modified(curr,samples_to_generate,label="abc",dist="uniform",vals=[int(curr.iloc[0]),int(curr.iloc[1])])
             generated_values.append(generated)
 
-        # if types=='uniform':
-        #     generated=generator.add_numeric_column_modified(curr,samples_to_generate,label="abc",dist="uniform",vals=[int(curr.iloc[0]),int(curr.iloc[1])])
-        #     generated_values.append(generated)
-
-        # if types=='random':
-        #     generated=generator.add_numeric_column_modified(curr,samples_to_generate,label="abc",dist="random",vals=[int(curr.iloc[0]),int(curr.iloc[1])])
-        #     generated_values.append(generated)
+        if types=='random':
+            generated=generator.add_numeric_column_modified(curr,samples_to_generate,label="abc",dist="random",vals=[int(curr.iloc[0]),int(curr.iloc[1])])
+            generated_values.append(generated)
     generated_values=np.array(generated_values)
     generated_values=generated_values.T
     return generated_values
