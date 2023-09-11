@@ -10,8 +10,10 @@ An Intel SA Fall Hackathon Project!
 
 How to run?
 ```
-docker build -t my-streamlit-app.
+docker build -t DockerFile.
 
-docker run -p 8501:8501 my-streamlit-app
+docker run -p 8501:8501 DockerFile
 ```
+
+Requirements specified in requirements.txt
 
